@@ -1,40 +1,91 @@
+<!-- Declares the document type as HTML5, telling browsers this is an HTML file -->
 <!DOCTYPE html>
+
+<!-- The root element of the HTML document, enclosing all content -->
 <html>
+  <!-- The <head> section contains metadata and resources for the webpage -->
   <head>
+    <!-- Sets the title of the webpage, displayed in the browser tab -->
     <title>Pranjal's First Website</title>
+
+    <!-- The <style> tag defines CSS (styling) for the webpage -->
+    <style>
+      /* The * selector applies styles to all elements on the page */
+      * {
+        /* Makes scrolling smooth when navigating to anchors (like #p_info) */
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
+
+  <!-- The <body> section contains the visible content of the webpage -->
   <body>
-    <!-- headings h1-h6 -->
+    <!-- An unordered list (<ul>) creates a bulleted list for navigation -->
+    <ul>
+      <!-- List item (<li>) contains a single item in the list -->
+      <li>
+        <!-- Anchor tag (<a>) creates a hyperlink; href specifies the link destination -->
+        <a href="index.html">Home</a>
+        <!-- Links to the homepage (index.html) -->
+      </li>
+      <li>
+        <a href="about.html">About</a>
+        <!-- Links to an about page (about.html) -->
+      </li>
+      <li>
+        <!-- Links to a section with id="p_info" on the same page -->
+        <a href="#p_info">Info</a>
+      </li>
+    </ul>
+
+    <!-- Horizontal rule (<hr>) adds a horizontal line to separate content -->
+    <hr />
+
+    <!-- Headings: <h1> to <h6> define text headings, with <h1> being the largest -->
     <h1>hello world</h1>
+    <!-- Largest heading -->
     <h2>hello world</h2>
+    <!-- Second largest heading -->
     <h3>hello world</h3>
+    <!-- Third largest heading -->
     <h4>hello world</h4>
+    <!-- Fourth largest heading -->
     <h5>hello world</h5>
+    <!-- Fifth largest heading -->
     <h6>hello world</h6>
+    <!-- Smallest heading -->
 
-    <!-- paragraph -->
+    <!-- Paragraph tag (<p>) defines a block of text -->
     <p>Lorem ipsum dolor sit.</p>
+    <!-- Placeholder text (commonly used for testing) -->
 
-    <!-- lists : ordered, unordered, descriptive -->
+    <!-- Lists: Ordered, Unordered, and Descriptive -->
 
+    <!-- Ordered list (<ol>) creates a numbered list; 'reversed' displays numbers in descending order; 'type="I"' uses Roman numerals -->
     <ol reversed type="I">
       <li>Apple</li>
+      <!-- List item; will be numbered (e.g., IV, III, II, I) -->
       <li>Apple</li>
       <li>Apple</li>
       <li>Apple</li>
     </ol>
 
+    <!-- Unordered list (<ul>) creates a bulleted list; 'type="circle"' uses circle bullets -->
     <ul type="circle">
       <li>Apple</li>
+      <!-- List item with a circle bullet -->
       <li>Apple</li>
       <li>Apple</li>
       <li>Apple</li>
       <li>Apple</li>
     </ul>
 
+    <!-- Description list (<dl>) creates a list of terms and their descriptions -->
     <dl>
+      <!-- <dt> defines a term; <dd> defines the description for that term -->
       <dt>Apple</dt>
       <dd>Red in Color</dd>
+      <!-- Description for the term "Apple" -->
       <dt>Apple</dt>
       <dd>Red in Color</dd>
       <dt>Apple</dt>
@@ -43,13 +94,17 @@
       <dd>Red in Color</dd>
     </dl>
 
+    <!-- Table tag (<table>) creates a table; 'border="1"' adds a visible border -->
     <table border="1">
+      <!-- Table row (<tr>) defines a row in the table -->
       <tr>
+        <!-- Table header (<th>) defines column headers (bold and centered by default) -->
         <th>Name</th>
         <th>Age</th>
         <th>Gender</th>
       </tr>
       <tr>
+        <!-- Table data (<td>) defines a cell in the table -->
         <td>Pranjal</td>
         <td>22</td>
         <td>Male</td>
@@ -60,5 +115,242 @@
         <td>Male</td>
       </tr>
     </table>
+
+    <hr />
+    <!-- Another horizontal line to separate sections -->
+
+    <!-- Another table with an ID for linking; 'id="p_info"' allows linking via #p_info -->
+    <table id="p_info" border="1">
+      <tr>
+        <th>Name</th>
+        <td>Pranjal</td>
+      </tr>
+      <tr>
+        <th>Age</th>
+        <td>22</td>
+      </tr>
+      <tr>
+        <th>Gender</th>
+        <td>Male</td>
+      </tr>
+      <!-- 'rowspan="2"' makes the cell span two rows vertically -->
+      <tr>
+        <th rowspan="2">Contact Info</th>
+        <td>9876543445</td>
+      </tr>
+      <tr>
+        <td>pranjal@email.com</td>
+        <!-- Appears in the same row as the second part of Contact Info -->
+      </tr>
+    </table>
+
+    <hr />
+    <!-- Another horizontal line -->
+
+    <!-- Anchor tags for external links and actions -->
+
+    <!-- Links to an external website (Google) -->
+    <a href="https://www.google.com"> google </a>
+
+    <!-- Initiates a phone call when clicked; 'tel:' protocol dials the number -->
+    <a href="tel:+918766367815">
+      <button>CALL ME</button>
+      <!-- Button inside the anchor tag for styling -->
+    </a>
+
+    <!-- Opens an email client with pre-filled subject and body -->
+    <a
+      href="mailto:rohn11shrma@gmail.com?subject=important email&body=this is a new email"
+    >
+      <button>EMAIL ME</button>
+    </a>
+
+    <!-- Opens WhatsApp with a pre-filled phone number for messaging -->
+    <a
+      href="https://api.whatsapp.com/send/?phone=%2B916394472139&text&type=phone_number&app_absent=0"
+    >
+      <p>WHATSAPP ME</p>
+    </a>
+
+    <hr />
+    <!-- Another horizontal line -->
+
+    <!-- Form tag (<form>) creates a user input form; 'action' specifies where data is sent; 'method="post"' sends data securely; 'enctype="text/plain"' formats data as plain text -->
+    <form
+      action="mailto:webigeeksofficial@gmail.com"
+      method="post"
+      enctype="text/plain"
+    >
+      <!-- Label tag associates text with an input field; 'for' matches the input's 'id' -->
+      <label for="f_name">Name :</label>
+      <!-- Input field for text; 'required' ensures it can't be empty; 'minlength' and 'maxlength' set character limits -->
+      <input
+        required
+        minlength="3"
+        maxlength="5"
+        id="f_name"
+        type="text"
+        placeholder="Enter your name..."
+        <!--
+        placeholder
+        text
+        shown
+        in
+        the
+        input
+        field
+        --
+      />
+      name="fullname"
+      <!-- Name used when form data is submitted -->
+      />
+      <br />
+      <!-- Line break to separate form elements -->
+
+      <label for="mail">Email Address :</label>
+      <!-- Input for email; 'type="email"' validates email format -->
+      <input
+        id="mail"
+        required
+        type="email"
+        placeholder="Enter your email..."
+        name="email_address"
+      />
+
+      <br />
+
+      <label for="pass">Password :</label>
+      <!-- Input for password; 'type="password"' hides the text as dots -->
+      <input
+        id="pass"
+        required
+        type="password"
+        placeholder="Enter your password..."
+        name="password"
+      />
+
+      <br />
+
+      <!-- Radio buttons allow selecting one option from a group; 'name="gender"' groups them together -->
+      Gender
+      <input type="radio" name="gender" id="m" value="male" />
+      <label for="m">Male</label>
+      <input type="radio" name="gender" id="f" value="female" />
+      <label for="f">Female</label>
+      <input type="radio" name="gender" id="o" value="others" />
+      <label for="o">Others</label>
+
+      <br />
+
+      <!-- Checkboxes allow selecting multiple options; 'name="skills"' groups them -->
+      Skills :
+      <!-- 'checked' means this option is selected by default -->
+      <input checked type="checkbox" name="skills" id="html" value="html" />
+      <label for="html">HTML</label>
+      <input type="checkbox" name="skills" id="css" value="css" />
+      <label for="css">CSS</label>
+      <input type="checkbox" name="skills" id="js" value="javascript" />
+      <label for="js">JAVASCRIPT</label>
+
+      <br />
+
+      <!-- Input for selecting a date -->
+      <label for="dob">Date of birth :</label>
+      <input type="date" name="date_of_birth" id="dob" />
+
+      <br />
+
+      <!-- Textarea for multi-line text input -->
+      <label for="com">Any Comments ?</label><br />
+      <textarea
+        name="comments"
+        placeholder="Enter your comments"
+        id="com"
+        cols="30"
+        <!--
+        Width
+        of
+        the
+        textarea
+        in
+        characters
+        --
+      >
+        rows="10" <!-- Height of the textarea in lines -->
+      ></textarea
+      >
+
+      <br />
+
+      <!-- Input for numbers; 'min' and 'max' set allowed range -->
+      <label>
+        Age :
+        <input
+          type="number"
+          name="age"
+          placeholder="age..."
+          min="18"
+          max="25"
+        />
+      </label>
+
+      <hr />
+
+      <!-- Input for telephone number; 'minlength' and 'maxlength' ensure 10 digits -->
+      <label>
+        Mobile :
+        <input
+          type="tel"
+          name="mobile"
+          placeholder="+91........."
+          minlength="10"
+          maxlength="10"
+        />
+      </label>
+
+      <br />
+
+      <!-- Input for file upload; 'accept' limits file types to JPEG/JPG -->
+      <label>
+        Profile : <input type="file" name="Profile" accept="jpeg jpg" />
+      </label>
+
+      <br />
+
+      <!-- Dropdown menu for selecting one option -->
+      <label>
+        COUNTRY :
+        <select name="country">
+          <!-- 'selected' and 'disabled' make this option unselectable and default -->
+          <option selected disabled>SELECT COUNTRY</option>
+          <option value="india">INDIA</option>
+          <option value="pakistan">PAKISTAN</option>
+          <option value="japan">JAPAN</option>
+          <option value="china">CHINA</option>
+        </select>
+      </label>
+
+      <!-- Range input for selecting a value within a range -->
+      <label>
+        Marks :
+        <input type="range" name="marks" value="0" <!-- Default value -- />
+        step="10"
+        <!-- Increments by 10 -->
+        min="0"
+        <!-- Minimum value -->
+        max="100"
+        <!-- Maximum value -->
+        />
+      </label>
+
+      <!-- Submit button sends the form data -->
+      <input type="submit" value="submit" />
+      <!-- Reset button clears all form inputs -->
+      <input type="reset" value="reset" />
+
+      <!-- Alternative buttons for submitting and resetting the form -->
+      <button type="submit">SUBMIT</button>
+      <button type="reset">CLEAR</button>
+    </form>
   </body>
 </html>
